@@ -466,7 +466,7 @@ if 'platform_counts' not in st.session_state:
 @st.cache_resource
 def load_components():
     try:
-        model = load_model('cyberbullying_lstm_model.h5')
+        model = load_model('cyberbullying_lstm_model.h5', compile=False)
         with open('tokenizer_dl.pkl', 'rb') as f:
             tokenizer = pickle.load(f)
         with open('preprocessor.pkl', 'rb') as f:
